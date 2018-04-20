@@ -21,7 +21,7 @@ FASTLED_USING_NAMESPACE
 //#define CLK_PIN   4
 #define LED_TYPE    WS2812B
 #define COLOR_ORDER GRB
-#define NUM_LEDS   32
+#define NUM_LEDS   144
 CRGB leds[NUM_LEDS];
 #define BRIGHTNESS         20
 #define FRAMES_PER_SECOND  120
@@ -87,5 +87,4 @@ void print_chip_info()
   printf("%dMB %s flash\n", spi_flash_get_chip_size() / (1024 * 1024),
          (chip_info.features & CHIP_FEATURE_EMB_FLASH) ? "embedded" : "external");
 }
-
 
