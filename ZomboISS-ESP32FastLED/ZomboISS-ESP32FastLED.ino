@@ -31,8 +31,8 @@
 WiFiMulti wifiMulti;
 //Find your Latitude and Longitude here
 //https://www.latlong.net/
-float mylat = 40.577984;
-float mylon = -105.100431;
+float mylat = 37.718050
+float mylon = -97.292012
 float isslat, isslon;
 int distance, number, count;
 String payload;
