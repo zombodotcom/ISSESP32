@@ -31,8 +31,8 @@
 WiFiMulti wifiMulti;
 //Find your Latitude and Longitude here
 //https://www.latlong.net/
-float mylat = 40.573922;
-float mylon = -105.083303;
+float mylat = 40.577984;
+float mylon = -105.100431;
 float isslat, isslon;
 int distance, number, count;
 String payload;
@@ -84,7 +84,7 @@ void loop() {
   Serial.println(payload);   //Print the response payload
  decodeLocJson();
  getDistance();
- issLocOLEDDisplay();
+// issLocOLEDDisplay();
  issLocSerialDisplay();
  setColor();
 // FastLEDshowESP32();
@@ -94,7 +94,7 @@ void loop() {
   getJson(pas);
   decodePassJson();
   displayPassSerial();
-  displayPassOLED();
+//  displayPassOLED();
   setColor();
 //  FastLEDshowESP32();
   delay(5000);
@@ -102,7 +102,7 @@ void loop() {
  getJson(ppl);
  decodePeopleJson();
  displayPeopleSerial();
- displayPeopleOLED();
+// displayPeopleOLED();
  setColor();
 // FastLEDshowESP32();
  delay(5000);    //Send a request every 30 seconds
@@ -266,6 +266,8 @@ void displayPassSerial() {
   
  display.display();
 }
+
+
 void setColor() {
  
   if (distance <= 1350 && distance >= 1201) {
@@ -286,5 +288,4 @@ void setColor() {
     FastLEDshowESP32();
   
 }
-
 
